@@ -1,4 +1,5 @@
 import { Router } from 'express'
+import { students } from '../data/students-data.js'
 
 const router = Router()
 

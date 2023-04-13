@@ -7,4 +7,11 @@ router.get('/', function(req, res) {
   res.render('index', { title: 'Express' })
 })
 
+// GET localhost:3000/students
+router.get('/', function(req, res) {
+  res.render('students/index', {
+    students: students
+  })
+})
+
 export { router }
