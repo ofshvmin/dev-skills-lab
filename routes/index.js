@@ -7,11 +7,13 @@ router.get('/', function(req, res) {
   res.render('index', { title: 'Express Skills' })
 })
 
-// GET localhost:3000/students
+// GET localhost:3000/skills
 router.get('/', function(req, res) {
-  res.render('skills/index', {
-    students: skills
-  })
+  res.render('index')
+})
+
+router.get('/new', function(req, res) {
+  res.render('skills/new')
 })
 
 export { router }
