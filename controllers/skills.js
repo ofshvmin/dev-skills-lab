@@ -7,9 +7,15 @@ import { skills } from "../data/skills-data.js"
 // })
 
 function index (req, res) {
-  console.log('can we find the index?')
-  res.render('skills/index', {
-    skills: skills
+  Skill.find({})
+  .then(skill => {
+    res.render('skills/index', {
+      skills: skills
+    })
+  })
+  .catch(error => {
+    console.log(error)
+    res.redirect('/')
   })
 }
 
