@@ -9,13 +9,13 @@
 <body>
   <h1>Students
     <ul>
-      <% students.forEach(student => { %>
+      <% skills.forEach(skill => { %>
         <li>
-          <%= student.name %>
+          <%= skill.name %>
           -
-          <%= student.grade > 65 ? 'passing' : 'failing' %>
+          <%= skill.age %>
         </li>
-      <% }) %>
+        <% }) %>
     </ul>
   </h1>
 </body>

@@ -1,4 +1,4 @@
-const students = [
+const skills = [
   {
     name: 'Alice',
     age: 20,
@@ -32,5 +32,5 @@ const students = [
 ]
 
 export {
-  students
+  skills
 }

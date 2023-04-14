@@ -1,4 +1,5 @@
 // import npm packages
+// import "dotenv/config.js"
 import express from 'express'
 import path from 'path'
 import { fileURLToPath } from 'url'
@@ -7,7 +8,7 @@ import logger from 'morgan'
 
 // import routers
 import { router as indexRouter } from './routes/index.js'
-import { router as studentsRouter } from './routes/students.js'
+import { router as skillsRouter } from './routes/skills.js'
 
 // create the express app
 const app = express()
@@ -27,7 +28,7 @@ app.use(
 
 // mount imported routes
 app.use('/', indexRouter)
-app.use('/students', studentsRouter)
+app.use('/skills', skillsRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
