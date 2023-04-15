@@ -12,7 +12,8 @@
     <label for="text-input">Skill:</label>
     <input type="text" name="text" id="text-input">
     <label for="level-select">Proficiency Level</label>
-    <select name="level" id="level-select">
+    <select name="level" id="level-select" required>
+      <option value="">--Select Your Level--</option>
       <option value="Beginner">Beginner</option>
       <option value="Novice">Novice</option>
       <option value="Intermediate">Intermediate</option>
@@ -20,5 +21,6 @@
     </select>
     <button type="submit">Add Skill</button>
     </form>
+    <a href="/skills">Go back</a>
 </body>
 </html>

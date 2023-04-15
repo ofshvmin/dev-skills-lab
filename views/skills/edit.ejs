@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit</title>
+</head>
+<body>
+  <h1>Edit Skill</h1>
+  <form action="/skills/<%= skill._id %>?_method=PUT" method="POST" autocomplete="off">
+    <input type="text" name="text" value="<%= skill.text %>">
+    <select name="level" id="level-select">
+      <option value="Beginner" <%= skill.level === "Beginner" ? "selected" : "" %>>Beginner</option>
+      <option value="Novice" <%= skill.level === "Novice" ? "selected" : "" %>>Novice</option>
+      <option value="Intermediate" <%= skill.level === "Intermediate" ? "selected" : "" %>>Intermediate</option>
+      <option value="Advanced" <%= skill.level === "Advanced" ? "selected" : "" %>>Advanced</option>
+    </select>
+    <button type="submit">Update Skill</button>
+</form>
+	<a href="/skills">Go back</a>
+</body>
+</html>
